@@ -6,6 +6,12 @@ Then, embed tags in your clipboard.
 ## Usage
 
 ![video](https://github.com/pyama86/nrm/blob/master/misc/nrm.gif?raw=true)
+
+please set github auth token
+```
+export GITHUB_AUTH_TOKEN=xxxxxxxxxxxxxxxxxx:
+```
+
 ```
 Usage of nrm:
   -o string
@@ -21,9 +27,10 @@ Usage of nrm:
 ```
 
 ### Github Enterprise
-plese set endpoint url to GHE_API_ENDPOINT environment variables.
+
+plese set endpoint url to GITHUB_API_ENDPOINT environment variables.
 ```
-export GHE_API_ENDPOINT=https://api.yourghe.com
+export GITHUB_API_ENDPOINT=https://git.xxx.com/api/v3
 ```
 
 ```bash

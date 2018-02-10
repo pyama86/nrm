@@ -82,8 +82,8 @@ func (cli *CLI) Run(args []string) int {
 	tc := oauth2.NewClient(ctx, ts)
 
 	var client *github.Client
-	if os.Getenv("GHE_API_ENDPOINT") != "" {
-		c, err := github.NewEnterpriseClient(os.Getenv("GHE_API_ENDPOINT"), "", tc)
+	if os.Getenv("GITHUB_API_ENDPOINT") != "" {
+		c, err := github.NewEnterpriseClient(os.Getenv("GITHUB_API_ENDPOINT"), "", tc)
 		if err != nil {
 			logrus.Fatal(err)
 		}
