@@ -4,6 +4,8 @@ Upload the screenshot to github.
 Then, embed tags in your clipboard.
 
 ## Usage
+
+![video](https://github.com/pyama86/nrm/blob/master/misc/nrm.gif?raw=true)
 ```
 Usage of nrm:
   -o string
