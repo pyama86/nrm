@@ -4,10 +4,25 @@ Upload the screenshot to github.
 Then, embed tags in your clipboard.
 
 ## Usage
+```
+Usage of nrm:
+  -o string
+        owner(Short)
+  -owner string
+        owner
+  -r string
+        repo(Short)
+  -repo string
+        repo
+  -version
+        Print version information and quit.
+```
 
-## Install
-
-To install, use `go get`:
+### Github Enterprise
+plese set endpoint url to GHE_API_ENDPOINT environment variables.
+```
+export GHE_API_ENDPOINT=https://api.yourghe.com
+```
 
 ```bash
 $ go get -d github.com/pyama86/nrm
