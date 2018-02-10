@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"net/url"
 	"os"
 	"os/exec"
 	"regexp"
@@ -105,7 +106,7 @@ func (cli *CLI) Run(args []string) int {
 
 	assined := regexp.MustCompile("(.*)/commit/")
 	group := assined.FindStringSubmatch(*createResponse.HTMLURL)
-	uploadPath := fmt.Sprintf(`![](%s/blob/master/%s?raw=true)`, group[1], name)
+	uploadPath := fmt.Sprintf(`![](%s/blob/master/%s?raw=true)`, group[1], url.QueryEscape(name))
 	if err := clipboard.WriteAll(uploadPath); err != nil {
 		logrus.Fatal(err)
 	}
